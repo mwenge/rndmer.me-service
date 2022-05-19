@@ -54,7 +54,7 @@ func main() {
   router := SetUpRouter()
   router.Use(cors.New(cors.Config{
     AllowOrigins:     []string{"http://localhost:4001", "https://localhost:4443",
-    "https://192.168.192.24:4443", "https://dirtylittlepipline.com"},
+    "https://192.168.192.24:4443", "https://dirtylittlepipeline.com"},
     AllowMethods:     []string{"POST"},
     AllowHeaders:     []string{"Origin", "Content-Type"},
     ExposeHeaders:    []string{"Content-Length"},
