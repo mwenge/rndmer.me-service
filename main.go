@@ -53,8 +53,12 @@ func LoadTls() gin.HandlerFunc {
 func main() {
   router := SetUpRouter()
   router.Use(cors.New(cors.Config{
-    AllowOrigins:     []string{"http://localhost:4001", "https://localhost:4443",
-    "https://192.168.192.24:4443", "https://dirtylittlepipeline.com"},
+    AllowOrigins:     []string{
+      "http://localhost:4001",
+      "https://localhost:4443",
+      "https://192.168.192.24:4443",
+      "https://randomrs.com",
+    },
     AllowMethods:     []string{"POST"},
     AllowHeaders:     []string{"Origin", "Content-Type"},
     ExposeHeaders:    []string{"Content-Length"},
@@ -79,7 +83,7 @@ func PostVideo(c *gin.Context) {
   c.Header("Access-Control-Allow-Origin", "http://localhost:4001")
   c.Header("Access-Control-Allow-Origin", "https://localhost:4443")
   c.Header("Access-Control-Allow-Origin", "https://192.168.192.24:4443")
-  c.Header("Access-Control-Allow-Origin", "https://dirtylittlepipeline.com")
+  c.Header("Access-Control-Allow-Origin", "https://randomrs.com")
   c.Header("Access-Control-Allow-Methods", "GET, OPTIONS, POST, PUT")
   c.Header("Access-Control-Allow-Headers", "Content-Type")
   // Pop a video from the top of the queue.
