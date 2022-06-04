@@ -58,6 +58,7 @@ func main() {
       "https://localhost:4443",
       "https://192.168.192.24:4443",
       "https://randomrs.com",
+      "https://rndmr.me",
     },
     AllowMethods:     []string{"POST"},
     AllowHeaders:     []string{"Origin", "Content-Type"},
@@ -84,6 +85,7 @@ func PostVideo(c *gin.Context) {
   c.Header("Access-Control-Allow-Origin", "https://localhost:4443")
   c.Header("Access-Control-Allow-Origin", "https://192.168.192.24:4443")
   c.Header("Access-Control-Allow-Origin", "https://randomrs.com")
+  c.Header("Access-Control-Allow-Origin", "https://rndmr.me")
   c.Header("Access-Control-Allow-Methods", "GET, OPTIONS, POST, PUT")
   c.Header("Access-Control-Allow-Headers", "Content-Type")
   // Pop a video from the top of the queue.
